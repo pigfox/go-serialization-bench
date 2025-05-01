@@ -56,11 +56,8 @@ Stability: All implementations handled 1M requests cleanly (100% HTTP 200), so a
 
 Best case: If your bottleneck is CPU or encoding time, stick to encoding/json. If you're network-bound, switch to Protobuf for its compactness.
 
+A comparison chart showing both requests and median latency across serialization methods.
 <p><img src="image.png" alt="latency chart"></p>
-<p><img src="image-1.png" alt="payload size vs latency chart"></p>
-
-![alt text](image.png)
 
 A comparison chart showing both payload size efficiency and median latency across serialization methods.
-
-![alt text](image-1.png)
+<p><img src="image-1.png" alt="payload size vs latency chart"></p>

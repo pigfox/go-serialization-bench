@@ -1,6 +1,7 @@
 #!/bin/bash
 set -x
 set -e
+clear
 
 ENDPOINTS=(
   "/json"
@@ -15,11 +16,11 @@ ENDPOINTS=(
   "/unmarshal/protobuf"
 )
 
-echo "Benchmarking 12 endpoints with 100k requests each (100 concurrent)..."
+echo "Benchmarking 10 endpoints with 1M requests each (1000 concurrent)..."
 echo
 
 for endpoint in "${ENDPOINTS[@]}"; do
   echo ">>> Benchmarking $endpoint"
-  hey -n 100000 -c 100 "http://localhost:8888$endpoint"
+  hey -n 1000000 -c 1000 "http://localhost:8888$endpoint"
   echo
 done

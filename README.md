@@ -57,3 +57,4 @@ Stability: All implementations handled 1M requests cleanly (100% HTTP 200), so a
 Best case: If your bottleneck is CPU or encoding time, stick to encoding/json. If you're network-bound, switch to Protobuf for its compactness.
 
 ![alt text](image.png)
+

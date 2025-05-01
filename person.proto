@@ -1,0 +1,17 @@
+syntax = "proto3";
+package main;
+
+option go_package = "serialization-bench/pb";
+
+message Address {
+  string street = 1;
+  string city = 2;
+  string zip_code = 3;
+}
+
+message Person {
+  string name = 1;
+  int32 age = 2;
+  string email = 3;
+  repeated Address addresses = 4;
+}
